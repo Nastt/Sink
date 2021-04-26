@@ -211,7 +211,6 @@ namespace SinkParameters.UnitTests
 
             //Act
             Assert.Throws<ArgumentException>
-
             (
                 () =>
                 {
