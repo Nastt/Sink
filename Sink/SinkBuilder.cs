@@ -63,7 +63,7 @@ namespace Sink
                 sketchDrainHole, sketchDrainHoleOffset);
             CreateExtrusion(kompasConnector.KsPart, sketchDrainHole, 15, true);
             CutExtrusion(kompasConnector.KsPart, sketchDrainHole, 20);
-            CreateFillet(kompasConnector.KsPart, 5);
+           // CreateFillet(kompasConnector.KsPart, 5);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Sink
         /// </summary>
         /// <param name="part">3D-модель компаса</param>
         /// <param name="radius">радиус скругления</param>
-        private void CreateFillet(ksPart part, double radius)
+        /*private void CreateFillet(ksPart part, double radius)
         {
             var entityFillet = (ksEntity)part.NewEntity(34);
             var filletDefinition = (ksFilletDefinition)entityFillet.GetDefinition();
@@ -174,7 +174,7 @@ namespace Sink
             entityCollectionFillet.Add(entityCollectionPart.GetByIndex(14));
             entityCollectionFillet.Add(entityCollectionPart.GetByIndex(15));
             entityFillet.Create();
-        }
+        }*/
     }
 }
 
