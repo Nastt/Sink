@@ -63,7 +63,6 @@ namespace Sink
                 sketchDrainHole, sketchDrainHoleOffset);
             CreateExtrusion(kompasConnector.KsPart, sketchDrainHole, 15, true);
             CutExtrusion(kompasConnector.KsPart, sketchDrainHole, 20);
-           // CreateFillet(kompasConnector.KsPart, 5);
         }
 
         /// <summary>
@@ -147,34 +146,6 @@ namespace Sink
             cutEntityDef.SetSketch(sketch);
             entityCutEntity.Create();
         }
-        
-        /// <summary>
-        /// Операция скругление
-        /// </summary>
-        /// <param name="part">3D-модель компаса</param>
-        /// <param name="radius">радиус скругления</param>
-        /*private void CreateFillet(ksPart part, double radius)
-        {
-            var entityFillet = (ksEntity)part.NewEntity(34);
-            var filletDefinition = (ksFilletDefinition)entityFillet.GetDefinition();
-            filletDefinition.radius = radius;
-            filletDefinition.tangent = true;
-            var entityCollectionPart = (ksEntityCollection)part.EntityCollection(6);
-            var entityCollectionFillet = (ksEntityCollection)filletDefinition.array();
-            entityCollectionFillet.Clear();
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(5));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(6));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(7));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(8));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(9));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(10));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(11));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(12));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(13));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(14));
-            entityCollectionFillet.Add(entityCollectionPart.GetByIndex(15));
-            entityFillet.Create();
-        }*/
     }
 }
 
