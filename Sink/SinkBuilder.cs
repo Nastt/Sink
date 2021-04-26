@@ -147,7 +147,7 @@ namespace Sink
             cutEntityDef.SetSketch(sketch);
             entityCutEntity.Create();
         }
-
+        
         /// <summary>
         /// Операция скругление
         /// </summary>
