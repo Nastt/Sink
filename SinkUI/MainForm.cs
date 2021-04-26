@@ -17,6 +17,7 @@ namespace SinkUI
         /// </summary>
         private SinkParameter _sinkParameters = new SinkParameter();
 
+
         public MainForm()
         {
             InitializeComponent();
