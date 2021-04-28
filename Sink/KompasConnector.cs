@@ -3,6 +3,7 @@ using Kompas6API5;
 
 namespace Sink
 {
+    //TODO: XML комментарии?
     public class KompasConnector
     {
         /// <summary>

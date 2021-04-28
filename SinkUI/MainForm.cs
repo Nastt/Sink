@@ -5,6 +5,7 @@ using Sink;
 
 namespace SinkUI
 {
+    //TODO: XML комментарии?
     public partial class MainForm : Form
     {
         /// <summary>
@@ -23,6 +24,7 @@ namespace SinkUI
             AssignValue();
         }
 
+        //TODO: XML комментарии?
         private void buildButton_Click(object sender, EventArgs e)
         {
             try
@@ -38,10 +40,12 @@ namespace SinkUI
             }
 
             _kompasConnector.OpenKompas();
+             //TODO: RSDN
             SinkBuilder _sinkBuilder = new SinkBuilder();
             _sinkBuilder.BuildSink(_sinkParameters, _kompasConnector);
         }
 
+        //TODO: XML комментарии?
         private void AssignValue()
         {
             _sinkParameters.SinkLength = Convert.ToDouble(SinkLengthNumericUpDown.Value);
@@ -53,20 +57,24 @@ namespace SinkUI
             _sinkParameters.CraneHoleDiameter = Convert.ToDouble(CraneHoleDiameterNumericUpDown.Value);
         }
 
+        //TODO: XML комментарии?
         private void SinkLengthNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
+            var tmpControl = (NumericUpDown) sender;
             try
             {
-                _sinkParameters.SinkLength = Convert.ToDouble(SinkLengthNumericUpDown.Value);
-                SinkLengthNumericUpDown.BackColor = Color.White;
+                // В словарь
+                _sinkParameters.SinkLength = Convert.ToDouble(tmpControl.Value);
+                tmpControl.BackColor = Color.White;
             }
 
             catch (Exception)
             {
-                SinkLengthNumericUpDown.BackColor = Color.LightSalmon;
+                tmpControl.BackColor = Color.LightSalmon;
             }
         }
 
+        //TODO: XML комментарии?
         private void SinkWidthNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -81,6 +89,7 @@ namespace SinkUI
             }
         }
 
+        //TODO: XML комментарии?
         private void CupSinkWidthNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -95,6 +104,7 @@ namespace SinkUI
             }
         }
 
+        //TODO: XML комментарии?
         private void CupSinkLengthNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -109,6 +119,7 @@ namespace SinkUI
             }
         }
 
+        //TODO: XML комментарии?
         private void SinkHeightNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -123,6 +134,7 @@ namespace SinkUI
             }
         }
 
+        //TODO: XML комментарии?
         private void DrainHoleDiameterNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -137,6 +149,7 @@ namespace SinkUI
             }
         }
 
+        //TODO: XML комментарии?
         private void CraneHoleDiameterNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             try
